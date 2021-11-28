@@ -22,7 +22,7 @@ public class Pelicula {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id_pelicula;
+    private Integer id_pelicula;
 
     @OneToOne
     private Imagen imagen;

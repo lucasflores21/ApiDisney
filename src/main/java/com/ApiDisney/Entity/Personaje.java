@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Data;
@@ -20,7 +20,7 @@ public class Personaje {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id_personaje;
+    private Integer id_personaje;
     
     @OneToOne
     private Imagen imagen;
@@ -30,7 +30,7 @@ public class Personaje {
     private Double peso;
     private String historia;
     
-    @OneToMany
+    @ManyToOne
     private Pelicula pelicula;
             
     

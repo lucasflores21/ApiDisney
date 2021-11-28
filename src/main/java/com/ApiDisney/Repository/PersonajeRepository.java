@@ -19,4 +19,9 @@ public interface PersonajeRepository extends JpaRepository<Personaje, Integer> {
     //para buscar por edad : /characters?age=edad
     @Query("SELECT p FROM Personaje p where p.edad = :age")
     public List<Personaje> findByAge(@Param("age") Integer age);
+    
+    
+    //para buscar por edad : /characters?movies=idMovie
+     @Query("SELECT p from Personaje p where pelicula.id_pelicula = :idMovie")
+    List<Personaje> findByPeli(@Param("idMovie") Integer idMovie);
 }
